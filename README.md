@@ -38,10 +38,10 @@ Professional coaching website for Dr. Kim Bland, featuring The Discovery Map Ret
 - Your site will be at: `https://[your-username].github.io/kimblandcoaching/`
 
 ### Step 5: Custom Domain (Optional)
-To use `kimblandcoaching.com`:
+To use `drkimbland.com`:
 
 1. In your repository Settings → Pages → Custom domain
-2. Enter: `kimblandcoaching.com`
+2. Enter: `drkimbland.com`
 3. Click Save
 4. In your domain registrar (GoDaddy, Namecheap, etc.):
    - Add a CNAME record pointing to: `[your-username].github.io`
