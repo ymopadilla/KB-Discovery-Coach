@@ -1,0 +1,11 @@
+{
+  "name": "Dr. Kim Bland - Discovery Coach",
+  "short_name": "Dr. Kim Bland",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#004E59",
+  "background_color": "#F7F3E8",
+  "display": "browser"
+}
