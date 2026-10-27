@@ -1246,6 +1246,13 @@
             .hero__headline { font-size: 1.8rem; }
             .hero__photo img { max-width: 360px; }
         }
+
+        .offering__price { font-weight: 700; color: var(--deep-teal); margin-top: auto; padding-top: 6px; }
+        .offering__price span { font-weight: 500; color: var(--text-medium); }
+        .offerings { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        .testimonials__more { margin-top: 28px; }
+        .testimonials__more > summary { cursor: pointer; display: inline-block; padding: 12px 0; font-weight: 600; color: var(--deep-teal); text-decoration: underline; text-underline-offset: 4px; }
+        .testimonials__more > .testimonials__grid { margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -1404,11 +1411,18 @@
                         <span class="offering__status">Available now</span>
                         <h3>One-on-One Discovery Intensive</h3>
                         <p>A focused, private coaching experience where we explore what's keeping you stuck, uncover beliefs and patterns, and identify meaningful next steps.</p>
+                        <p>This isn't weekly coaching. We sit down for a breakthrough, and afterward you decide whether you'd like another session.</p>
+                        <p class="offering__price">$250 an hour <span>· most Intensives run 2 to 3 hours</span></p>
                     </article>
                     <article class="offering offering--future">
                         <span class="offering__status">Coming soon</span>
                         <h3>The Discovery Map Retreat</h3>
                         <p>A two-day immersive experience using the Face It. Name It. Live It. framework, combining reflection, discovery, and intentional action. Details coming later.</p>
+                    </article>
+                    <article class="offering offering--future">
+                        <span class="offering__status">Coming soon</span>
+                        <h3>Discovery Coaching Community</h3>
+                        <p>A subscription community with a resource area you can return to between sessions. Details coming soon.</p>
                     </article>
                 </div>
 
@@ -1444,7 +1458,7 @@
                                 </li>
                                 <li class="credentials__item">
                                     <span class="credentials__icon" aria-hidden="true">✦</span>
-                                    <span class="credentials__text">10+ Years of Coaching Experience</span>
+                                    <span class="credentials__text">Nearly a Decade of Coaching Experience</span>
                                 </li>
                                 <li class="credentials__item">
                                     <span class="credentials__icon" aria-hidden="true">✦</span>
@@ -1453,6 +1467,18 @@
                                 <li class="credentials__item">
                                     <span class="credentials__icon" aria-hidden="true">✦</span>
                                     <span class="credentials__text">Specializing in Mindset, Beliefs &amp; Self-Discovery</span>
+                                </li>
+                                <li class="credentials__item">
+                                    <span class="credentials__icon" aria-hidden="true">✦</span>
+                                    <span class="credentials__text">Master Practitioner of NLP</span>
+                                </li>
+                                <li class="credentials__item">
+                                    <span class="credentials__icon" aria-hidden="true">✦</span>
+                                    <span class="credentials__text">Family Ministry Certified</span>
+                                </li>
+                                <li class="credentials__item">
+                                    <span class="credentials__icon" aria-hidden="true">✦</span>
+                                    <span class="credentials__text">DC Certified</span>
                                 </li>
                             </ul>
                         </div>
@@ -1511,19 +1537,13 @@
                             <p>This breakthrough gave me a new level of self-awareness, not only in how I approach tasks but also in how I communicate with others. I've learned to ask better questions, uncover the real issues, and truly understand my clients' goals. As a result, I'm serving them better while also giving myself permission to move forward with clarity and confidence.</p>
                             <p>Kim's coaching didn't just help me be more productive—it helped me change the way I think, work, and connect with people.”</p>
                         </blockquote>
-                        <figcaption>Steve, Business Owner</figcaption>
+                        <figcaption>S., Business Owner</figcaption>
                     </figure>
                     <figure class="testimonial">
                         <blockquote>
                             <p>Coaching was a game-changer for me. I became more aware of the language I use when talking to myself, and that shift helped me take control of my emotions instead of being controlled by them. I'm more intentional, more focused, and I can see the benefits both on and off the court.”</p>
                         </blockquote>
-                        <figcaption>College Athlete</figcaption>
-                    </figure>
-                    <figure class="testimonial">
-                        <blockquote>
-                            <p>Coaching brought up the roots of my pent-up anger and fear. Once those roots were exposed, I gained new insight into how I react to things. Now, I can recognize those emotions quickly and release my initial reaction instead of being controlled by it. This was a fantastic step toward greater self-awareness and control over my emotions.”</p>
-                        </blockquote>
-                        <figcaption>James, Business Owner</figcaption>
+                        <figcaption>D.C., College Athlete</figcaption>
                     </figure>
                     <figure class="testimonial">
                         <blockquote>
@@ -1531,8 +1551,30 @@
                         </blockquote>
                         <figcaption>Business Owner in Transition</figcaption>
                     </figure>
-                    <!-- Two student testimonials (Tomasa, Brent) held back until Kim has their permission to post. -->
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>I don't know how Kim does it, but she makes you think differently. She asks hard questions that push you to really explore, and you walk away in a state of action and new awareness.”</p>
+                        </blockquote>
+                        <figcaption>B., Student</figcaption>
+                    </figure>
                 </div>
+                <details class="testimonials__more">
+                    <summary>Read more testimonials</summary>
+                    <div class="testimonials__grid">
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>Coaching brought up the roots of my pent-up anger and fear. Once those roots were exposed, I gained new insight into how I react to things. Now, I can recognize those emotions quickly and release my initial reaction instead of being controlled by it. This was a fantastic step toward greater self-awareness and control over my emotions.”</p>
+                        </blockquote>
+                        <figcaption>J.D., Business Owner</figcaption>
+                    </figure>
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>Coaching with Kim made me feel safe in a way I hadn't experienced before. I had a real breakthrough in my thoughts around food and giving myself permission in this season of life.”</p>
+                        </blockquote>
+                        <figcaption>T.V., Student</figcaption>
+                    </figure>
+                    </div>
+                </details>
             </div>
         </section>
 
@@ -1569,7 +1611,7 @@
                         <div class="faq__answer">
                             <p>A Discovery Intensive is dedicated time for us to explore an area of your life where you're feeling stuck, uncertain, or ready for change.</p>
                             <p>Rather than rushing through a conversation, we create space to examine your thoughts, beliefs, and patterns, uncover new insights, and identify meaningful next steps.</p>
-                            <p>We'll discuss the format and what you hope to explore before scheduling.</p>
+                            <p>Most Intensives run 2 to 3 hours, at $250 an hour. We'll discuss the format and what you hope to explore before scheduling.</p>
                         </div>
                     </details>
                     <details class="faq__item">
