@@ -17,7 +17,7 @@
     <meta property="og:image" content="https://drkimbland.com/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dr. Kim Bland smiling with her dog beside her Discovery Coach logo and the words Discover What's Underneath. Change What Comes Next.">
+    <meta property="og:image:alt" content="Dr. Kim Bland smiling beside her Discovery Coach logo and the words Discover What's Underneath. Change What Comes Next.">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dr. Kim Bland — Discovery Coach">
@@ -31,11 +31,35 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#004E59">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/cinzel-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="images/kbdc-logo-640.webp" as="image" fetchpriority="high">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Dr. Kim Bland Discovery Coaching",
+      "url": "https://drkimbland.com/",
+      "image": "https://drkimbland.com/images/og-image.jpg",
+      "logo": "https://drkimbland.com/images/kbdc-logo-640.webp",
+      "telephone": "+1-719-651-4089",
+      "description": "Discovery coaching in Colorado Springs. Through meaningful conversations and powerful questions, discover what's underneath and change what comes next.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Colorado Springs", "addressRegion": "CO", "addressCountry": "US" },
+      "areaServed": "Colorado Springs, CO",
+      "founder": { "@type": "Person", "name": "Dr. Kim Bland", "jobTitle": "Discovery Coach" }
+    }
+    </script>
     
     <style>
+
+        @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/cinzel-latin-600-normal.woff2) format('woff2'); }
+        @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/cinzel-latin-700-normal.woff2) format('woff2'); }
+        @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/montserrat-latin-400-normal.woff2) format('woff2'); }
+        @font-face { font-family: 'Montserrat'; font-style: italic; font-weight: 400; font-display: swap; src: url(fonts/montserrat-latin-400-italic.woff2) format('woff2'); }
+        @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-display: swap; src: url(fonts/montserrat-latin-500-normal.woff2) format('woff2'); }
+        @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/montserrat-latin-600-normal.woff2) format('woff2'); }
+        @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/montserrat-latin-700-normal.woff2) format('woff2'); }
         * {
             margin: 0;
             padding: 0;
@@ -586,7 +610,7 @@
             gap: 40px;
         }
 
-        .footer__link-group h4 {
+        .footer__link-group .footer__heading {
             font-family: 'Cinzel', serif;
             color: var(--muted-gold);
             margin-bottom: 16px;
@@ -1183,6 +1207,45 @@
         .contact-form__button:hover {
             color: var(--white);
         }
+
+        /* Gold text that meets contrast (bright gold stays for lines and shapes) */
+        :root { --gold-text: #86672A; --gold-light: #E3C98F; }
+        .section__label,
+        .framework-step__sub { color: var(--gold-text); }
+        .contact .section__label,
+        .contact__alt a,
+        .footer__credit a,
+        .footer__link-group .footer__heading { color: var(--gold-light); }
+        .footer__link-group .footer__heading { font-family: 'Cinzel', serif; margin-bottom: 16px; font-size: 1.1rem; }
+
+        /* Tap targets */
+        .nav__links a,
+        .footer__link-group a,
+        .footer__credit a,
+        .contact__alt a { display: inline-block; padding: 12px 4px; }
+        .footer__link-group li { margin-bottom: 0; }
+        .nav__logo { min-height: 48px; }
+        .nav__logo img { height: 48px; width: auto; }
+        .footer__brand img { height: 60px; width: auto; }
+
+        .contact-form__privacy { margin-top: 14px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.85); text-align: center; }
+        .checkin__intro p { text-align: left; }
+        .checkin__intro .section__label, .checkin__intro .section__title { text-align: center; }
+
+        /* Hero with photo */
+        .hero { min-height: auto; padding: 120px 24px 80px; }
+        .hero__inner { max-width: 1100px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; text-align: center; }
+        .hero__logo { margin-bottom: 24px; }
+        .hero__logo img { max-width: 230px; width: 100%; height: auto; }
+        .hero__headline { font-size: 2.3rem; margin-bottom: 32px; }
+        .hero__photo img { width: 100%; max-width: 440px; height: auto; border-radius: 12px; box-shadow: 0 20px 40px rgba(0, 78, 89, 0.18); display: block; margin: 0 auto; }
+        @media (max-width: 900px) {
+            .hero { padding: 100px 20px 56px; }
+            .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero__logo img { max-width: 190px; }
+            .hero__headline { font-size: 1.8rem; }
+            .hero__photo img { max-width: 360px; }
+        }
     </style>
 </head>
 <body>
@@ -1192,7 +1255,7 @@
     <nav class="nav" role="navigation" aria-label="Main Navigation">
         <div class="nav__inner">
             <a href="#home" class="nav__logo" aria-label="Dr. Kim Bland - Discovery Coach Home">
-                <img src="images/KBDC-logo-icon.png" alt="Dr. Kim Bland Discovery Coach logo">
+                <img src="images/kbdc-mark-120.webp" alt="Dr. Kim Bland Discovery Coach, home" width="120" height="103">
             </a>
 
             <ul class="nav__links" id="nav-menu" role="menubar" aria-hidden="false">
@@ -1219,21 +1282,26 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero__inner">
-                <div class="hero__logo">
-                    <img src="images/KBDC-logo.png" alt="Dr. Kim Bland, Discovery Coach" width="400" height="400">
+                <div class="hero__text">
+                    <div class="hero__logo">
+                        <img src="images/kbdc-logo-640.webp" alt="Dr. Kim Bland, Discovery Coach" width="529" height="640" fetchpriority="high">
+                    </div>
+                    <p class="hero__tagline">Welcome to Dr. Kim Bland Discovery Coaching</p>
+                    <h1 class="hero__headline">Discover What's Underneath. Change What Comes Next.</h1>
+                    <div class="hero__actions">
+                        <a href="#contact" class="hero__cta">Schedule a Discovery Conversation</a>
+                        <a href="#discovery-check-in" class="btn-outline">Take the Discovery Check-In</a>
+                    </div>
                 </div>
-                <p class="hero__tagline">Welcome to Dr. Kim Bland Discovery Coaching</p>
-                <h1 class="hero__headline">Discover What's Underneath. Change What Comes Next.</h1>
-                <div class="hero__actions">
-                    <a href="#contact" class="hero__cta">Schedule a Discovery Conversation</a>
-                    <a href="#discovery-check-in" class="btn-outline">Take the Discovery Check-In</a>
+                <div class="hero__photo">
+                    <img src="images/kim-bland-800.webp" srcset="images/kim-bland-480.webp 480w, images/kim-bland-800.webp 800w" sizes="(max-width: 900px) 90vw, 440px" alt="Dr. Kim Bland smiling outdoors in a floral dress" width="800" height="999">
                 </div>
             </div>
         </section>
 
         <!-- Tired of Feeling Stuck -->
         <section class="section section--alt" id="welcome">
-            <div class="section__inner prose prose--center">
+            <div class="section__inner prose">
                 <h2 class="section__title">Tired of Feeling Stuck?</h2>
                 <p>Sometimes we spend so much time doing what we think we're supposed to do that we lose sight of what we actually want.</p>
                 <p>Through meaningful conversations and powerful questions, I help you explore the thoughts, beliefs, and patterns that may be keeping you stuck. Together, we uncover what's underneath, discover what truly matters to you, and explore what you want your next chapter to look like.</p>
@@ -1355,7 +1423,7 @@
             <div class="section__inner">
                 <div class="about__grid">
                     <div class="about__image">
-                        <img src="images/BLAND-14.png" alt="Dr. Kim Bland smiling outdoors with her arms around her dog" width="400" height="600" loading="lazy">
+                        <img src="images/kim-bland-dog-800.webp" srcset="images/kim-bland-dog-400.webp 400w, images/kim-bland-dog-800.webp 800w" sizes="(max-width: 968px) 90vw, 400px" alt="Dr. Kim Bland smiling outdoors with her arms around her dog" width="800" height="1200" loading="lazy">
                     </div>
                     <div class="about__content">
                         <span class="section__label">About Dr. Kim</span>
@@ -1573,6 +1641,7 @@
                     </div>
 
                     <button type="submit" class="contact-form__button">Send Message</button>
+                    <p class="contact-form__privacy">Your information goes only to Dr. Kim and is never shared or sold.</p>
                 </form>
 
                 <div class="contact__alt">
@@ -1588,11 +1657,11 @@
         <div class="footer__inner">
             <div class="footer__top">
                 <div class="footer__brand">
-                    <img src="images/KBDC-logo-icon.png" alt="Dr. Kim Bland Discovery Coach" loading="lazy">
+                    <img src="images/kbdc-mark-120.webp" alt="" width="120" height="103" loading="lazy">
                 </div>
                 <div class="footer__links">
                     <div class="footer__link-group">
-                        <h4>Navigate</h4>
+                        <h3 class="footer__heading">Navigate</h3>
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About Dr. Kim</a></li>
@@ -1602,7 +1671,7 @@
                         </ul>
                     </div>
                     <div class="footer__link-group">
-                        <h4>Connect</h4>
+                        <h3 class="footer__heading">Connect</h3>
                         <ul>
                             <li><a href="tel:+17196514089">719-651-4089</a></li>
                             <li><a href="#contact">Send a Message</a></li>
@@ -1634,8 +1703,10 @@
 
             if (isMobileNav()) {
                 navLinks.setAttribute('aria-hidden', String(!open));
+                navLinks.inert = !open;
             } else {
                 navLinks.setAttribute('aria-hidden', 'false');
+                navLinks.inert = false;
             }
 
             if (open && navLinkAnchors[0]) {
@@ -1644,6 +1715,7 @@
         }
 
         setMenuState(false);
+        window.matchMedia('(max-width: 768px)').addEventListener('change', () => setMenuState(false));
 
         hamburger.addEventListener('click', () => {
             const open = !hamburger.classList.contains('active');
