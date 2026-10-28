@@ -1342,6 +1342,16 @@
         .checkin__result { background: var(--gray-band); border-left: none; border-radius: 8px; }
         .nav__links { background: #FFFFFF; }
         @media (min-width: 769px) { .nav__links { background: transparent; } }
+
+        /* Discovery Scholarships */
+        .offering__aid { font-size: 0.92rem; color: var(--on-teal); }
+        .offering__aid a { color: var(--gold-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+        .scholar-band { margin-top: 56px; padding: 36px 40px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 8px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between; }
+        .scholar-band__text { flex: 1 1 420px; }
+        .scholar-band__text h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 1.8rem; color: var(--deep-teal); margin-bottom: 10px; }
+        .scholar-band__text p { color: var(--ink-soft); }
+        .scholar-band__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        .faq__answer a { color: var(--deep-teal); font-weight: 600; }
     </style>
 </head>
 <body>
@@ -1458,6 +1468,7 @@
                         <p>A focused, private coaching experience where we explore what's keeping you stuck, uncover beliefs and patterns, and identify meaningful next steps.</p>
                         <p>This isn't weekly coaching. We sit down for a breakthrough, and afterward you decide whether you'd like another session.</p>
                         <p class="offering__price">$250 an hour <span>· most Intensives run 2 to 3 hours</span></p>
+                        <p class="offering__aid">Is cost a barrier? <a href="discovery-scholarships/">Ask about a Discovery Scholarship</a></p>
                     </article>
                     <article class="offering offering--future">
                         <span class="offering__status">Coming soon</span>
@@ -1473,6 +1484,17 @@
 
                 <div class="work__cta">
                     <a href="#contact" class="hero__cta">Schedule a Discovery Coaching Session</a>
+                </div>
+
+                <div class="scholar-band" id="scholarships">
+                    <div class="scholar-band__text">
+                        <h3>Discovery Scholarships</h3>
+                        <p>Coaching shouldn't depend on your bank account. Each month I set aside a limited number of Discovery Intensives at reduced or no cost for people who need coaching but can't afford it right now.</p>
+                    </div>
+                    <div class="scholar-band__actions">
+                        <a href="discovery-scholarships/" class="hero__cta">Request a scholarship</a>
+                        <a href="discovery-scholarships/#pay-it-forward" class="btn-outline">Give to Pay It Forward</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1676,6 +1698,13 @@
                             <p>Not at all!</p>
                             <p>Although I have spent years coaching and training leaders, my passion is helping people discover more about themselves.</p>
                             <p>Whether you're navigating change, questioning your direction, or simply feeling stuck, Discovery Coaching may be a good fit.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item">
+                        <summary>What if I can't afford coaching?</summary>
+                        <div class="faq__answer">
+                            <p>Please reach out. Each month I set aside a limited number of Discovery Scholarships at reduced or no cost.</p>
+                            <p>Tell me a little about where you are on the <a href="discovery-scholarships/">scholarship page</a>, and I'll be in touch personally.</p>
                         </div>
                     </details>
                     <details class="faq__item">
