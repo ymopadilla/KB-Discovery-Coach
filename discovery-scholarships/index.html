@@ -1369,6 +1369,16 @@
         .pay-forward .hero__cta:hover { background: #FFFFFF; border-color: #FFFFFF; }
         .pay-forward__soon { display: inline-block; padding: 14px 24px; border: 2px dashed var(--gold-light); border-radius: 6px; color: var(--gold-light); font-weight: 600; }
         .pay-forward__note { font-size: 0.88rem; }
+
+        /* Multi-page layout */
+        .page-first { padding-top: 150px; }
+        @media (max-width: 768px) { .page-first { padding-top: 120px; } }
+        .next-step { background: #FFFFFF; border-top: 1px solid var(--line); padding: 40px 24px; }
+        .next-step__link { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 10px; text-decoration: none; color: var(--deep-teal); padding: 8px 0; }
+        .next-step__label { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-text); }
+        .next-step__title { font-family: 'Newsreader', Georgia, serif; font-size: 1.9rem; font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+        .next-step__link:hover .next-step__title { color: var(--teal-dark); text-decoration-thickness: 2px; }
+        .testimonials__all { display: inline-block; margin-top: 28px; padding: 12px 0; font-weight: 600; color: var(--deep-teal); text-decoration: underline; text-underline-offset: 4px; }
     </style>
 </head>
 <body>
@@ -1383,10 +1393,10 @@
 
             <ul class="nav__links" id="nav-menu" role="menubar" aria-hidden="false">
                 <li role="none"><a href="../" role="menuitem">Home</a></li>
-                <li role="none"><a href="../#about" role="menuitem">About Dr. Kim</a></li>
-                <li role="none"><a href="../#work-with-me" role="menuitem">Work With Me</a></li>
                 <li role="none"><a href="../discovery-check-in/" role="menuitem">Discovery Check-In</a></li>
-                <li role="none"><a href="../#contact" role="menuitem">Contact</a></li>
+                <li role="none"><a href="../work-with-me/" role="menuitem">Work With Me</a></li>
+                <li role="none"><a href="../about/" role="menuitem">About Dr. Kim</a></li>
+                <li role="none"><a href="../contact/" role="menuitem">Contact</a></li>
             </ul>
 
             <div class="nav__contact">
@@ -1461,6 +1471,11 @@
                 </div>
             </div>
         </section>
+        <nav class="next-step" aria-label="Next page">
+            <div class="section__inner">
+                <a href="../work-with-me/" class="next-step__link"><span class="next-step__label">Back</span> <span class="next-step__title">Work With Me</span> <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
     </main>
 
     <!-- Footer -->
@@ -1475,17 +1490,18 @@
                         <h2 class="footer__heading">Navigate</h2>
                         <ul>
                             <li><a href="../">Home</a></li>
-                            <li><a href="../#about">About Dr. Kim</a></li>
-                            <li><a href="../#work-with-me">Work With Me</a></li>
                             <li><a href="../discovery-check-in/">Discovery Check-In</a></li>
-                            <li><a href="../#contact">Contact</a></li>
+                            <li><a href="../work-with-me/">Work With Me</a></li>
+                            <li><a href="../about/">About Dr. Kim</a></li>
+                            <li><a href="../contact/">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer__link-group">
                         <h2 class="footer__heading">Connect</h2>
                         <ul>
                             <li><a href="tel:+17196514089">719-651-4089</a></li>
-                            <li><a href="../#contact">Send a Message</a></li>
+                            <li><a href="../contact/">Send a Message</a></li>
+                            <li><a href="../discovery-scholarships/">Discovery Scholarships</a></li>
                         </ul>
                     </div>
                 </div>

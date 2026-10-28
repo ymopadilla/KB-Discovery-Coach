@@ -1352,25 +1352,34 @@
         .scholar-band__text p { color: var(--ink-soft); }
         .scholar-band__actions { display: flex; flex-wrap: wrap; gap: 12px; }
         .faq__answer a { color: var(--deep-teal); font-weight: 600; }
+
+        /* Multi-page layout */
+        .page-first { padding-top: 150px; }
+        @media (max-width: 768px) { .page-first { padding-top: 120px; } }
+        .next-step { background: #FFFFFF; border-top: 1px solid var(--line); padding: 40px 24px; }
+        .next-step__link { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 10px; text-decoration: none; color: var(--deep-teal); padding: 8px 0; }
+        .next-step__label { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-text); }
+        .next-step__title { font-family: 'Newsreader', Georgia, serif; font-size: 1.9rem; font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+        .next-step__link:hover .next-step__title { color: var(--teal-dark); text-decoration-thickness: 2px; }
+        .testimonials__all { display: inline-block; margin-top: 28px; padding: 12px 0; font-weight: 600; color: var(--deep-teal); text-decoration: underline; text-underline-offset: 4px; }
     </style>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
     <nav class="nav" role="navigation" aria-label="Main Navigation">
         <div class="nav__inner">
-            <a href="#home" class="nav__logo" aria-label="Dr. Kim Bland - Discovery Coach Home">
+            <a href="./" class="nav__logo" aria-label="Dr. Kim Bland - Discovery Coach Home">
                 <img src="images/kbdc-mark-240.webp" alt="" width="240" height="207">
                 <span class="nav__brand"><span class="nav__brand-name">Dr. Kim Bland</span><span class="nav__brand-sub">Discovery Coach</span></span>
             </a>
 
             <ul class="nav__links" id="nav-menu" role="menubar" aria-hidden="false">
-                <li role="none"><a href="#home" role="menuitem">Home</a></li>
-                <li role="none"><a href="#about" role="menuitem">About Dr. Kim</a></li>
-                <li role="none"><a href="#work-with-me" role="menuitem">Work With Me</a></li>
-                <li role="none"><a href="#discovery-check-in" role="menuitem">Discovery Check-In</a></li>
-                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                <li role="none"><a href="./" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="discovery-check-in/" role="menuitem">Discovery Check-In</a></li>
+                <li role="none"><a href="work-with-me/" role="menuitem">Work With Me</a></li>
+                <li role="none"><a href="about/" role="menuitem">About Dr. Kim</a></li>
+                <li role="none"><a href="contact/" role="menuitem">Contact</a></li>
             </ul>
 
             <div class="nav__contact">
@@ -1393,7 +1402,7 @@
                     <p class="hero__tagline">Welcome to Dr. Kim Bland Discovery Coaching</p>
                     <h1 class="hero__headline">Discover What's Underneath. Change What Comes Next.</h1>
                     <div class="hero__actions">
-                        <a href="#contact" class="hero__cta">Schedule a Discovery Conversation</a>
+                        <a href="contact/" class="hero__cta">Schedule a Discovery Conversation</a>
                         <a href="discovery-check-in/" class="btn-outline">Take the Discovery Check-In</a>
                     </div>
                 </div>
@@ -1413,20 +1422,6 @@
             </div>
         </section>
 
-        <!-- Does This Sound Familiar -->
-        <section class="section" id="familiar">
-            <div class="section__inner prose">
-                <h2 class="section__title">Does This Sound Familiar?</h2>
-                <p>Have you ever looked at your life and wondered, <em>Is this really what I want?</em></p>
-                <p>Maybe you're doing everything you're supposed to do, checking all the boxes, and keeping up with life's responsibilities. Yet something feels missing.</p>
-                <p>Maybe you've spent so much time meeting everyone else's expectations that you've forgotten to ask yourself what you actually want.</p>
-                <p>Or perhaps you know something needs to change, but you're not sure what—or where to begin.</p>
-                <p class="emphasis">What if feeling stuck isn't the end of the story, but the beginning of a discovery?</p>
-                <p>Sometimes all it takes is a different question, a new perspective, or the opportunity to explore what's underneath.</p>
-                <p class="emphasis">You don't have to have all the answers. You just have to be willing to get curious.</p>
-            </div>
-        </section>
-
         <!-- Discovery Check-In -->
         <section class="section section--alt" id="discovery-check-in">
             <div class="section__inner">
@@ -1441,151 +1436,6 @@
                     <a href="discovery-check-in/" class="hero__cta">Take the Discovery Check-In</a>
                     <p class="checkin__note">3 minutes · Free · Instant reflection</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Work With Dr. Kim -->
-        <section class="section section--cream" id="work-with-me">
-            <div class="section__inner">
-                <div class="prose">
-                    <span class="section__label">Work With Dr. Kim</span>
-                    <h2 class="section__title">Let's Discover What's Keeping You Stuck</h2>
-                    <p>Do you ever feel like you're going through the motions, doing what you're supposed to do, but wondering if there's something more?</p>
-                    <p>Discovery Coaching is an opportunity to slow down, ask different questions, and explore what's really going on beneath the surface.</p>
-                    <p>Together, we'll explore your thoughts, beliefs, and patterns, discover what matters most to you, and identify what you want to do next.</p>
-                    <p>You don't need to have everything figured out before we begin. Sometimes the most important discoveries start with a single conversation.</p>
-                    <ul class="question-list">
-                        <li>When was the last time you stopped to ask yourself what you really want?</li>
-                        <li>Are the beliefs guiding your decisions actually yours?</li>
-                        <li>What might change if you started looking at your life differently?</li>
-                    </ul>
-                </div>
-
-                <div class="offerings">
-                    <article class="offering">
-                        <span class="offering__status">Available now</span>
-                        <h3>One-on-One Discovery Intensive</h3>
-                        <p>A focused, private coaching experience where we explore what's keeping you stuck, uncover beliefs and patterns, and identify meaningful next steps.</p>
-                        <p>This isn't weekly coaching. We sit down for a breakthrough, and afterward you decide whether you'd like another session.</p>
-                        <p class="offering__price">$250 an hour <span>· most Intensives run 2 to 3 hours</span></p>
-                        <p class="offering__aid">Is cost a barrier? <a href="discovery-scholarships/">Ask about a Discovery Scholarship</a></p>
-                    </article>
-                    <article class="offering offering--future">
-                        <span class="offering__status">Coming soon</span>
-                        <h3>The Discovery Map Retreat</h3>
-                        <p>A two-day immersive experience using the Face It. Name It. Live It. framework, combining reflection, discovery, and intentional action. Details coming later.</p>
-                    </article>
-                    <article class="offering offering--future">
-                        <span class="offering__status">Coming soon</span>
-                        <h3>Discovery Coaching Community</h3>
-                        <p>A subscription community with a resource area you can return to between sessions. Details coming soon.</p>
-                    </article>
-                </div>
-
-                <div class="work__cta">
-                    <a href="#contact" class="hero__cta">Schedule a Discovery Coaching Session</a>
-                </div>
-
-                <div class="scholar-band" id="scholarships">
-                    <div class="scholar-band__text">
-                        <h3>Discovery Scholarships</h3>
-                        <p>Coaching shouldn't depend on your bank account. Each month I set aside a limited number of Discovery Intensives at reduced or no cost for people who need coaching but can't afford it right now.</p>
-                    </div>
-                    <div class="scholar-band__actions">
-                        <a href="discovery-scholarships/" class="hero__cta">Request a scholarship</a>
-                        <a href="discovery-scholarships/#pay-it-forward" class="btn-outline">Give to Pay It Forward</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="section section--alt" id="about">
-            <div class="section__inner">
-                <div class="about__grid">
-                    <div class="about__image">
-                        <img src="images/kim-bland-800.webp" srcset="images/kim-bland-480.webp 480w, images/kim-bland-800.webp 800w" sizes="(max-width: 968px) 90vw, 400px" alt="Dr. Kim Bland smiling outdoors in a floral dress" width="800" height="999" loading="lazy">
-                    </div>
-                    <div class="about__content">
-                        <span class="section__label">About Dr. Kim</span>
-                        <h2 class="section__title">Helping You Discover What's Underneath</h2>
-                        <p>I'm Dr. Kim Bland, a Discovery Coach with nearly a decade of experience helping people explore their thinking, challenge their beliefs, and discover what they truly want.</p>
-                        <p>I've always been fascinated by the way we think. How our beliefs are formed, why we make the choices we do, and how easily we can find ourselves living according to someone else's expectations instead of our own.</p>
-                        <p>I believe many people feel stuck because they've lost touch with what matters to them. They've spent years doing what they think they should do, following the path in front of them, or simply going through the motions.</p>
-                        <p>That's where I love to coach.</p>
-                        <p>I listen, ask deep questions, and help people look beneath the surface of their thoughts, emotions, and beliefs. I'm not here to tell you what to do or who to become. I'm here to help you discover those answers for yourself.</p>
-                        <p>My coaching is built around a framework I developed called <strong>Face It. Name It. Live It.</strong> It's a process of becoming aware of what's happening, discovering what's underneath, and choosing what you want to do next.</p>
-                        <p>Because discovery is powerful. But what you choose to do with it can change the direction of your life.</p>
-
-                        <div class="about__credentials">
-                            <ul class="credentials__list">
-                                <li class="credentials__item">
-                                    <span class="credentials__icon" aria-hidden="true">✦</span>
-                                    <span class="credentials__text">Doctor of Strategic Leadership (2026)</span>
-                                </li>
-                                <li class="credentials__item">
-                                    <span class="credentials__icon" aria-hidden="true">✦</span>
-                                    <span class="credentials__text">Nearly a Decade of Coaching Experience</span>
-                                </li>
-                                <li class="credentials__item">
-                                    <span class="credentials__icon" aria-hidden="true">✦</span>
-                                    <span class="credentials__text">Creator of The Discovery Map Framework</span>
-                                </li>
-                                <li class="credentials__item">
-                                    <span class="credentials__icon" aria-hidden="true">✦</span>
-                                    <span class="credentials__text">Specializing in Mindset, Beliefs &amp; Self-Discovery</span>
-                                </li>
-                                <li class="credentials__item">
-                                    <span class="credentials__icon" aria-hidden="true">✦</span>
-                                    <span class="credentials__text">Master Practitioner of NLP</span>
-                                </li>
-                                <li class="credentials__item">
-                                    <span class="credentials__icon" aria-hidden="true">✦</span>
-                                    <span class="credentials__text">Family Ministry Certified</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- My Approach -->
-        <section class="section" id="approach">
-            <div class="section__inner">
-                <div class="prose">
-                    <span class="section__label">My Approach</span>
-                    <h2 class="section__title">Discovery Begins With a Question</h2>
-                    <p>Have you ever stopped to wonder why you think the way you do?</p>
-                    <p>Why you keep making the same choices?</p>
-                    <p>Or why you feel stuck even when everything in your life seems fine?</p>
-                    <p>I believe there is so much to discover beneath the surface of our thoughts, beliefs, and emotions.</p>
-                    <p>My approach to coaching is simple. I listen, ask questions, challenge assumptions, and create space for you to discover your own answers.</p>
-                    <p>I don't believe someone else should decide what your life is supposed to look like. I believe you have the opportunity to explore what matters to you and choose how you want to move forward.</p>
-                </div>
-
-                <h3 class="framework__title">Face It. Name It. Live It.</h3>
-                <ol class="framework-steps">
-                    <li class="framework-step">
-                        <span class="framework-step__num" aria-hidden="true">01</span>
-                        <h3>Face It</h3>
-                        <span class="framework-step__sub">Become Aware</span>
-                        <p>Take an honest look at where you are, what you're experiencing, and what may be keeping you stuck.</p>
-                    </li>
-                    <li class="framework-step">
-                        <span class="framework-step__num" aria-hidden="true">02</span>
-                        <h3>Name It</h3>
-                        <span class="framework-step__sub">Discover What's Underneath</span>
-                        <p>Explore the thoughts, beliefs, emotions, and patterns influencing your choices. Put words to what you're discovering and begin seeing new possibilities.</p>
-                    </li>
-                    <li class="framework-step">
-                        <span class="framework-step__num" aria-hidden="true">03</span>
-                        <h3>Live It</h3>
-                        <span class="framework-step__sub">Choose What's Next</span>
-                        <p>Turn your discoveries into intentional choices and meaningful action that reflect what matters most to you.</p>
-                    </li>
-                </ol>
-                <p class="framework__tagline">Discover what's underneath. Change what comes next.</p>
             </div>
         </section>
 
@@ -1621,147 +1471,14 @@
                         <figcaption>B., Student</figcaption>
                     </figure>
                 </div>
-                <details class="testimonials__more">
-                    <summary>Read more testimonials</summary>
-                    <div class="testimonials__grid">
-                    <figure class="testimonial">
-                        <blockquote>
-                            <p>Coaching brought up the roots of my pent-up anger and fear. Once those roots were exposed, I gained new insight into how I react to things. Now, I can recognize those emotions quickly and release my initial reaction instead of being controlled by it. This was a fantastic step toward greater self-awareness and control over my emotions.”</p>
-                        </blockquote>
-                        <figcaption>J.D., Business Owner</figcaption>
-                    </figure>
-                    <figure class="testimonial">
-                        <blockquote>
-                            <p>Coaching with Kim made me feel safe in a way I hadn't experienced before. I had a real breakthrough in my thoughts around food and giving myself permission in this season of life.”</p>
-                        </blockquote>
-                        <figcaption>T.V., Student</figcaption>
-                    </figure>
-                    </div>
-                </details>
+                <a href="work-with-me/#testimonials" class="testimonials__all">Read more testimonials</a>
             </div>
         </section>
-
-        <!-- FAQ -->
-        <section class="section section--cream" id="faq">
+        <nav class="next-step" aria-label="Next page">
             <div class="section__inner">
-                <span class="section__label">Questions</span>
-                <h2 class="section__title">Frequently Asked Questions</h2>
-                <div class="faq">
-                    <details class="faq__item">
-                        <summary>What is Discovery Coaching?</summary>
-                        <div class="faq__answer">
-                            <p>Discovery Coaching is about getting curious about yourself. It's an opportunity to explore your thoughts, beliefs, emotions, and patterns to better understand what's keeping you stuck and what you truly want.</p>
-                            <p>Through meaningful conversations and powerful questions, I help you discover new perspectives, possibilities, and choices.</p>
-                        </div>
-                    </details>
-                    <details class="faq__item">
-                        <summary>How do I know if Discovery Coaching is right for me?</summary>
-                        <div class="faq__answer">
-                            <p>Do you feel stuck, unfulfilled, or unsure what you want next? Maybe life looks good on the outside, but something feels missing. Or perhaps you're tired of doing what you think you're supposed to do.</p>
-                            <p>You don't need to be going through a major life transition to benefit from coaching. Sometimes you simply want to understand yourself better.</p>
-                        </div>
-                    </details>
-                    <details class="faq__item">
-                        <summary>What happens during a coaching session?</summary>
-                        <div class="faq__answer">
-                            <p>We have a conversation! I listen, ask questions, and help you explore what's happening beneath the surface.</p>
-                            <p>You won't receive a list of things you <em>should</em> do. Instead, we'll explore your thinking, challenge assumptions, and uncover possibilities you may not have considered.</p>
-                            <p>The goal is for you to leave with greater awareness, clarity, and a sense of what you want to do next.</p>
-                        </div>
-                    </details>
-                    <details class="faq__item">
-                        <summary>What is a One-on-One Discovery Intensive?</summary>
-                        <div class="faq__answer">
-                            <p>A Discovery Intensive is dedicated time for us to explore an area of your life where you're feeling stuck, uncertain, or ready for change.</p>
-                            <p>Rather than rushing through a conversation, we create space to examine your thoughts, beliefs, and patterns, uncover new insights, and identify meaningful next steps.</p>
-                            <p>Most Intensives run 2 to 3 hours, at $250 an hour. We'll discuss the format and what you hope to explore before scheduling.</p>
-                        </div>
-                    </details>
-                    <details class="faq__item">
-                        <summary>Do I need to know what I want to work on before we meet?</summary>
-                        <div class="faq__answer">
-                            <p>Absolutely not!</p>
-                            <p>Sometimes knowing that something doesn't feel right is enough to begin.</p>
-                            <p>You don't need to arrive with all the answers. That's part of what we'll explore together.</p>
-                        </div>
-                    </details>
-                    <details class="faq__item">
-                        <summary>Is Discovery Coaching the same as counseling or therapy?</summary>
-                        <div class="faq__answer">
-                            <p>No. Coaching focuses on self-discovery, personal growth, choices, and moving forward.</p>
-                            <p>While our conversations may explore emotions and beliefs, coaching is not a substitute for mental health counseling, diagnosis, or treatment.</p>
-                        </div>
-                    </details>
-                    <details class="faq__item">
-                        <summary>Do you only coach leaders?</summary>
-                        <div class="faq__answer">
-                            <p>Not at all!</p>
-                            <p>Although I have spent years coaching and training leaders, my passion is helping people discover more about themselves.</p>
-                            <p>Whether you're navigating change, questioning your direction, or simply feeling stuck, Discovery Coaching may be a good fit.</p>
-                        </div>
-                    </details>
-                    <details class="faq__item">
-                        <summary>What if I can't afford coaching?</summary>
-                        <div class="faq__answer">
-                            <p>Please reach out. Each month I set aside a limited number of Discovery Scholarships at reduced or no cost.</p>
-                            <p>Tell me a little about where you are on the <a href="discovery-scholarships/">scholarship page</a>, and I'll be in touch personally.</p>
-                        </div>
-                    </details>
-                    <details class="faq__item">
-                        <summary>How do I get started?</summary>
-                        <div class="faq__answer">
-                            <p>It starts with a conversation.</p>
-                            <p>We'll talk about what you're experiencing, what you're hoping to discover, and whether working together feels like the right fit.</p>
-                        </div>
-                    </details>
-                </div>
-                <div class="faq__cta">
-                    <a href="#contact" class="hero__cta">Schedule a Discovery Conversation</a>
-                </div>
+                <a href="discovery-check-in/" class="next-step__link"><span class="next-step__label">Next</span> <span class="next-step__title">Take the Discovery Check-In</span> <span aria-hidden="true">&rarr;</span></a>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="section contact" id="contact">
-            <div class="contact__inner">
-                <span class="section__label">Get Started</span>
-                <h2 class="section__title">Schedule a Discovery Conversation</h2>
-                <p class="contact__subtitle">It starts with a conversation. Tell me a little about what you're experiencing and what you're hoping to discover, and I'll reach out to find a time to talk.</p>
-
-                <form class="contact-form" action="https://formspree.io/f/xreewppz" method="POST">
-                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
-                    <input type="hidden" name="_subject" value="New Discovery Conversation request (drkimbland.com)">
-
-                    <div class="contact-form__group">
-                        <label for="name" class="contact-form__label">Name</label>
-                        <input type="text" id="name" name="name" class="contact-form__input" autocomplete="name" required>
-                    </div>
-
-                    <div class="contact-form__group">
-                        <label for="email" class="contact-form__label">Email</label>
-                        <input type="email" id="email" name="email" class="contact-form__input" autocomplete="email" required>
-                    </div>
-
-                    <div class="contact-form__group">
-                        <label for="phone" class="contact-form__label">Phone <span style="opacity: 0.7;">(optional)</span></label>
-                        <input type="tel" id="phone" name="phone" class="contact-form__input" autocomplete="tel">
-                    </div>
-
-                    <div class="contact-form__group">
-                        <label for="message" class="contact-form__label">Message</label>
-                        <textarea id="message" name="message" class="contact-form__textarea" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="contact-form__button">Send Message</button>
-                    <p class="contact-form__privacy">Your information goes only to Dr. Kim and is never shared or sold.</p>
-                </form>
-
-                <div class="contact__alt">
-                    <p>Or call directly: <a href="tel:+17196514089">719-651-4089</a></p>
-                    <p style="margin-top: 8px;">Located in Colorado Springs, Colorado</p>
-                </div>
-            </div>
-        </section>
+        </nav>
     </main>
 
     <!-- Footer -->
@@ -1773,20 +1490,21 @@
                 </div>
                 <div class="footer__links">
                     <div class="footer__link-group">
-                        <h3 class="footer__heading">Navigate</h3>
+                        <h2 class="footer__heading">Navigate</h2>
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About Dr. Kim</a></li>
-                            <li><a href="#work-with-me">Work With Me</a></li>
-                            <li><a href="#discovery-check-in">Discovery Check-In</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="./">Home</a></li>
+                            <li><a href="discovery-check-in/">Discovery Check-In</a></li>
+                            <li><a href="work-with-me/">Work With Me</a></li>
+                            <li><a href="about/">About Dr. Kim</a></li>
+                            <li><a href="contact/">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer__link-group">
-                        <h3 class="footer__heading">Connect</h3>
+                        <h2 class="footer__heading">Connect</h2>
                         <ul>
                             <li><a href="tel:+17196514089">719-651-4089</a></li>
-                            <li><a href="#contact">Send a Message</a></li>
+                            <li><a href="contact/">Send a Message</a></li>
+                            <li><a href="discovery-scholarships/">Discovery Scholarships</a></li>
                         </ul>
                     </div>
                 </div>
