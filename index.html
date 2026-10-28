@@ -1254,6 +1254,8 @@
         .testimonials__more { margin-top: 28px; }
         .testimonials__more > summary { cursor: pointer; display: inline-block; padding: 12px 0; font-weight: 600; color: var(--deep-teal); text-decoration: underline; text-underline-offset: 4px; }
         .testimonials__more > .testimonials__grid { margin-top: 20px; }
+        .checkin__teaser { text-align: center; }
+        .checkin__teaser .checkin__note { margin-top: 14px; }
     </style>
 </head>
 <body>
@@ -1298,7 +1300,7 @@
                     <h1 class="hero__headline">Discover What's Underneath. Change What Comes Next.</h1>
                     <div class="hero__actions">
                         <a href="#contact" class="hero__cta">Schedule a Discovery Conversation</a>
-                        <a href="#discovery-check-in" class="btn-outline">Take the Discovery Check-In</a>
+                        <a href="discovery-check-in/" class="btn-outline">Take the Discovery Check-In</a>
                     </div>
                 </div>
                 <div class="hero__photo">
@@ -1341,52 +1343,10 @@
                     <p>Take <strong>The Discovery Check-In</strong>, a short self-reflection experience designed to help you pause, get curious, and explore what may be happening beneath the surface.</p>
                     <p><strong>Discover something about yourself in just a few minutes.</strong></p>
                 </div>
-
-                <form class="checkin__card" id="checkin-form" novalidate>
-                    <p class="checkin__eyebrow">Dr. Kim Bland · Discovery Coaching</p>
-                    <h3 class="checkin__title">The Discovery Check-In</h3>
-                    <p class="checkin__sub">Take a few minutes to explore what might be keeping you stuck.</p>
-
-                    <fieldset class="checkin__q">
-                        <legend>1. How often do you feel like you're going through the motions?</legend>
-                        <label class="checkin__option"><input type="radio" name="q1" value="0"> Rarely</label>
-                        <label class="checkin__option"><input type="radio" name="q1" value="1"> Sometimes</label>
-                        <label class="checkin__option"><input type="radio" name="q1" value="2"> Often</label>
-                    </fieldset>
-
-                    <fieldset class="checkin__q">
-                        <legend>2. How clear are you about what you truly want?</legend>
-                        <label class="checkin__option"><input type="radio" name="q2" value="0"> Very clear</label>
-                        <label class="checkin__option"><input type="radio" name="q2" value="1"> Somewhat clear</label>
-                        <label class="checkin__option"><input type="radio" name="q2" value="2"> Not clear right now</label>
-                    </fieldset>
-
-                    <fieldset class="checkin__q">
-                        <legend>3. How often do other people's expectations influence your choices?</legend>
-                        <label class="checkin__option"><input type="radio" name="q3" value="0"> Rarely</label>
-                        <label class="checkin__option"><input type="radio" name="q3" value="1"> Sometimes</label>
-                        <label class="checkin__option"><input type="radio" name="q3" value="2"> Often</label>
-                    </fieldset>
-
-                    <fieldset class="checkin__q">
-                        <legend>4. When you think about making a change, what happens?</legend>
-                        <label class="checkin__option"><input type="radio" name="q4" value="0"> I feel ready</label>
-                        <label class="checkin__option"><input type="radio" name="q4" value="1"> I hesitate or second-guess myself</label>
-                        <label class="checkin__option"><input type="radio" name="q4" value="2"> I don't know where to start</label>
-                    </fieldset>
-
-                    <button type="submit" class="checkin__submit">See My Reflection</button>
-                    <p class="checkin__note">3 minutes · Free · Instant reflection. Your answers stay on your screen and aren't sent anywhere.</p>
-                    <p class="checkin__error" id="checkin-error" role="alert" hidden>Please answer all four questions to see your reflection.</p>
-
-                    <div class="checkin__result" id="checkin-result" tabindex="-1" aria-live="polite" hidden>
-                        <h4 id="checkin-result-title"></h4>
-                        <p id="checkin-result-text"></p>
-                        <p>Sometimes the most important discoveries start with a single conversation.</p>
-                        <a href="#contact" class="hero__cta">Schedule a Discovery Conversation</a>
-                        <button type="button" class="checkin__reset" id="checkin-reset">Start over</button>
-                    </div>
-                </form>
+                <div class="checkin__teaser">
+                    <a href="discovery-check-in/" class="hero__cta">Take the Discovery Check-In</a>
+                    <p class="checkin__note">3 minutes · Free · Instant reflection</p>
+                </div>
             </div>
         </section>
 
@@ -1781,57 +1741,6 @@
             }
         });
 
-        // Discovery Check-In (answers stay in the browser; nothing is sent)
-        const checkinForm = document.getElementById('checkin-form');
-        const checkinError = document.getElementById('checkin-error');
-        const checkinResult = document.getElementById('checkin-result');
-        const resultTitle = document.getElementById('checkin-result-title');
-        const resultText = document.getElementById('checkin-result-text');
-
-        const reflections = [
-            {
-                max: 2,
-                title: 'You may be closer than you think.',
-                text: "Your answers suggest you have a good sense of what you want and feel ready to move. Even so, there may be something underneath worth exploring. A different question or a new perspective can sharpen what you already know and help you choose what comes next with intention."
-            },
-            {
-                max: 5,
-                title: 'Something is asking for your attention.',
-                text: "Your answers suggest parts of your life feel clear while others feel uncertain. You may be keeping up with what you're supposed to do while quietly wondering if there's something more. That curiosity is worth listening to. It's often where discovery begins."
-            },
-            {
-                max: 8,
-                title: 'Feeling stuck may be the beginning of a discovery.',
-                text: "Your answers suggest you may be going through the motions, carrying other people's expectations, and unsure where to start. You don't have to have all the answers. You just have to be willing to get curious about what's underneath, and you don't have to do it alone."
-            }
-        ];
-
-        checkinForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let total = 0;
-            for (const q of ['q1', 'q2', 'q3', 'q4']) {
-                const picked = checkinForm.querySelector('input[name="' + q + '"]:checked');
-                if (!picked) {
-                    checkinError.hidden = false;
-                    checkinResult.hidden = true;
-                    return;
-                }
-                total += Number(picked.value);
-            }
-            checkinError.hidden = true;
-            const r = reflections.find(item => total <= item.max);
-            resultTitle.textContent = r.title;
-            resultText.textContent = r.text;
-            checkinResult.hidden = false;
-            checkinResult.focus();
-        });
-
-        document.getElementById('checkin-reset').addEventListener('click', () => {
-            checkinForm.reset();
-            checkinResult.hidden = true;
-            checkinError.hidden = true;
-            checkinForm.querySelector('input[name="q1"]').focus();
-        });
     </script>
 </body>
 </html>
