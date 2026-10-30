@@ -1363,10 +1363,56 @@
         .next-step__title { font-family: 'Newsreader', Georgia, serif; font-size: 1.9rem; font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
         .next-step__link:hover .next-step__title { color: var(--teal-dark); text-decoration-thickness: 2px; }
         .testimonials__all { display: inline-block; margin-top: 28px; padding: 12px 0; font-weight: 600; color: var(--deep-teal); text-decoration: underline; text-underline-offset: 4px; }
+        /* Announcement bar: Career & Major Discovery introductory rate */
+        .promo { position: relative; z-index: 1001; background: #00363E; color: #FFFFFF; padding: 10px 56px 10px 20px; text-align: center; font-size: 0.95rem; line-height: 1.45; }
+        .promo[hidden] { display: none; }
+        .promo__text { margin: 0; color: #FFFFFF; }
+        .promo__text strong { color: #E3C98F; font-weight: 700; }
+        .promo__text a { color: #E3C98F; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+        .promo__text a:hover, .promo__text a:focus-visible { color: #FFFFFF; }
+        .promo__close { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); width: 44px; height: 44px; border: none; background: transparent; color: #FFFFFF; font-size: 1.6rem; line-height: 1; cursor: pointer; border-radius: 4px; }
+        .promo__close:hover { background: rgba(255, 255, 255, 0.12); }
+        .promo__close:focus-visible, .promo__text a:focus-visible { outline: 3px solid #E3C98F; outline-offset: 2px; }
+        @media (max-width: 768px) {
+            .promo { font-size: 0.88rem; text-align: left; }
+            .nav__links { top: calc(76px + var(--promo-offset, 0px)); }
+        }
     </style>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
+
+    <div class="promo" id="promo" role="region" aria-label="Announcement" hidden>
+        <p class="promo__text"><strong>New:</strong> Career &amp; Major Discovery Sessions, $100 introductory rate. <a href="../work-with-me/#career-discovery">Learn more<span aria-hidden="true"> &rarr;</span></a></p>
+        <button type="button" class="promo__close" aria-label="Dismiss announcement"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <script>
+    (function () {
+        var bar = document.getElementById('promo');
+        var key = 'kbdc-promo-career-intro';
+        try { if (localStorage.getItem(key) === 'closed') { bar.remove(); return; } } catch (e) {}
+        bar.hidden = false;
+        var root = document.documentElement;
+        function place() {
+            var nav = document.querySelector('.nav');
+            if (!nav) return;
+            var h = bar.isConnected ? bar.offsetHeight : 0;
+            var top = Math.max(0, h - window.scrollY);
+            nav.style.top = top + 'px';
+            root.style.setProperty('--promo-offset', top + 'px');
+        }
+        window.addEventListener('scroll', place, { passive: true });
+        window.addEventListener('resize', place);
+        document.addEventListener('DOMContentLoaded', place);
+        bar.querySelector('.promo__close').addEventListener('click', function () {
+            try { localStorage.setItem(key, 'closed'); } catch (e) {}
+            bar.remove();
+            place();
+            var first = document.querySelector('.nav a');
+            if (first) first.focus();
+        });
+    })();
+    </script>
 
     <nav class="nav" role="navigation" aria-label="Main Navigation">
         <div class="nav__inner">

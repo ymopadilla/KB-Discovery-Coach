@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Work with Dr. Kim Bland: a 2 to 3 hour One-on-One Discovery Intensive at $250 an hour, Discovery Scholarships, client testimonials, and answers to common questions.">
+    <meta name="description" content="Work with Dr. Kim Bland: a 2 to 3 hour One-on-One Discovery Intensive at $250 an hour, Career &amp; Major Discovery Sessions for students and adults at a $100 introductory rate, Discovery Scholarships, client testimonials, and answers to common questions.">
     <link rel="canonical" href="https://drkimbland.com/work-with-me/">
 
     <title>Work With Dr. Kim — One-on-One Discovery Intensive</title>
@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dr. Kim Bland - Discovery Coach">
     <meta property="og:title" content="Work With Dr. Kim — One-on-One Discovery Intensive">
-    <meta property="og:description" content="Work with Dr. Kim Bland: a 2 to 3 hour One-on-One Discovery Intensive at $250 an hour, Discovery Scholarships, client testimonials, and answers to common questions.">
+    <meta property="og:description" content="Work with Dr. Kim Bland: a 2 to 3 hour One-on-One Discovery Intensive at $250 an hour, Career &amp; Major Discovery Sessions for students and adults at a $100 introductory rate, Discovery Scholarships, client testimonials, and answers to common questions.">
     <meta property="og:url" content="https://drkimbland.com/work-with-me/">
     <meta property="og:image" content="https://drkimbland.com/images/og-kim-bland-2026-10.jpg">
     <meta property="og:image:width" content="1200">
@@ -21,7 +21,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Work With Dr. Kim — One-on-One Discovery Intensive">
-    <meta name="twitter:description" content="Work with Dr. Kim Bland: a 2 to 3 hour One-on-One Discovery Intensive at $250 an hour, Discovery Scholarships, client testimonials, and answers to common questions.">
+    <meta name="twitter:description" content="Work with Dr. Kim Bland: a 2 to 3 hour One-on-One Discovery Intensive at $250 an hour, Career &amp; Major Discovery Sessions for students and adults at a $100 introductory rate, Discovery Scholarships, client testimonials, and answers to common questions.">
     <meta name="twitter:image" content="https://drkimbland.com/images/og-kim-bland-2026-10.jpg">
 
     <!-- Icons -->
@@ -1346,10 +1346,77 @@
         .next-step__title { font-family: 'Newsreader', Georgia, serif; font-size: 1.9rem; font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
         .next-step__link:hover .next-step__title { color: var(--teal-dark); text-decoration-thickness: 2px; }
         .testimonials__all { display: inline-block; margin-top: 28px; padding: 12px 0; font-weight: 600; color: var(--deep-teal); text-decoration: underline; text-underline-offset: 4px; }
+        /* Career & Major Discovery Sessions */
+        #career-discovery { background: #FFFFFF; border-top: 1px solid var(--line); }
+        .career__lede { font-family: 'Newsreader', Georgia, serif; font-size: 1.5rem; line-height: 1.4; color: var(--deep-teal); margin-bottom: 24px; }
+        .career__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 40px; align-items: start; }
+        .career__explore { padding: 28px 32px; background: var(--gray-band); border-radius: 6px; }
+        .career__explore h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 1.4rem; color: var(--deep-teal); margin-bottom: 14px; }
+        .career__explore ul { margin: 0; padding-left: 1.2em; }
+        .career__explore li { font-size: 1.05rem; line-height: 1.6; color: var(--ink); }
+        .career__explore li + li { margin-top: 8px; }
+        .career__invest { padding: 28px 32px; background: var(--deep-teal); border-radius: 6px; color: #FFFFFF; }
+        .career__invest h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 1.4rem; color: #FFFFFF; margin-bottom: 10px; }
+        .career__price { font-size: 1.6rem; font-weight: 700; color: var(--gold-light); margin-bottom: 4px; }
+        .career__price-note { color: var(--on-teal); font-weight: 600; margin-bottom: 16px; }
+        .career__invest p { color: #FFFFFF; line-height: 1.6; }
+        .career__invest .hero__cta { display: inline-block; margin-top: 22px; background: var(--gold-light); border-color: var(--gold-light); color: var(--teal-dark); }
+        .career__invest .hero__cta:hover { background: #FFFFFF; border-color: #FFFFFF; }
+        .career__closing { margin-top: 32px; font-family: 'Newsreader', Georgia, serif; font-size: 1.3rem; color: var(--deep-teal); max-width: 760px; }
+        .offering:not(:first-child) .offering__aid { color: var(--ink-soft); }
+        .offering:not(:first-child) .offering__aid a { color: var(--deep-teal); }
+        .career__aid { margin-top: 14px; font-size: 0.92rem; color: var(--on-teal); }
+        .career__aid a { color: var(--gold-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+        /* Announcement bar: Career & Major Discovery introductory rate */
+        .promo { position: relative; z-index: 1001; background: #00363E; color: #FFFFFF; padding: 10px 56px 10px 20px; text-align: center; font-size: 0.95rem; line-height: 1.45; }
+        .promo[hidden] { display: none; }
+        .promo__text { margin: 0; color: #FFFFFF; }
+        .promo__text strong { color: #E3C98F; font-weight: 700; }
+        .promo__text a { color: #E3C98F; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+        .promo__text a:hover, .promo__text a:focus-visible { color: #FFFFFF; }
+        .promo__close { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); width: 44px; height: 44px; border: none; background: transparent; color: #FFFFFF; font-size: 1.6rem; line-height: 1; cursor: pointer; border-radius: 4px; }
+        .promo__close:hover { background: rgba(255, 255, 255, 0.12); }
+        .promo__close:focus-visible, .promo__text a:focus-visible { outline: 3px solid #E3C98F; outline-offset: 2px; }
+        @media (max-width: 768px) {
+            .promo { font-size: 0.88rem; text-align: left; }
+            .nav__links { top: calc(76px + var(--promo-offset, 0px)); }
+        }
     </style>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
+
+    <div class="promo" id="promo" role="region" aria-label="Announcement" hidden>
+        <p class="promo__text"><strong>New:</strong> Career &amp; Major Discovery Sessions, $100 introductory rate. <a href="#career-discovery">Learn more<span aria-hidden="true"> &rarr;</span></a></p>
+        <button type="button" class="promo__close" aria-label="Dismiss announcement"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <script>
+    (function () {
+        var bar = document.getElementById('promo');
+        var key = 'kbdc-promo-career-intro';
+        try { if (localStorage.getItem(key) === 'closed') { bar.remove(); return; } } catch (e) {}
+        bar.hidden = false;
+        var root = document.documentElement;
+        function place() {
+            var nav = document.querySelector('.nav');
+            if (!nav) return;
+            var h = bar.isConnected ? bar.offsetHeight : 0;
+            var top = Math.max(0, h - window.scrollY);
+            nav.style.top = top + 'px';
+            root.style.setProperty('--promo-offset', top + 'px');
+        }
+        window.addEventListener('scroll', place, { passive: true });
+        window.addEventListener('resize', place);
+        document.addEventListener('DOMContentLoaded', place);
+        bar.querySelector('.promo__close').addEventListener('click', function () {
+            try { localStorage.setItem(key, 'closed'); } catch (e) {}
+            bar.remove();
+            place();
+            var first = document.querySelector('.nav a');
+            if (first) first.focus();
+        });
+    })();
+    </script>
 
     <nav class="nav" role="navigation" aria-label="Main Navigation">
         <div class="nav__inner">
@@ -1419,6 +1486,14 @@
                         <p class="offering__price">$250 an hour <span>· most Intensives run 2 to 3 hours</span></p>
                         <p class="offering__aid">Is cost a barrier? <a href="../discovery-scholarships/">Ask about a Discovery Scholarship</a></p>
                     </article>
+                    <article class="offering">
+                        <span class="offering__status">Available now</span>
+                        <h3>Career &amp; Major Discovery Sessions</h3>
+                        <p>One-on-one sessions for high school students, college students, and adults exploring majors, careers, and what comes next.</p>
+                        <p class="offering__price">$100 per 60-minute session <span>· introductory rate, regularly $250 an hour</span></p>
+                        <p><a href="#career-discovery">Learn more about Career &amp; Major Discovery</a></p>
+                        <p class="offering__aid">Is cost a barrier? <a href="../discovery-scholarships/">Ask about a Discovery Scholarship</a></p>
+                    </article>
                     <article class="offering offering--future">
                         <span class="offering__status">Coming soon</span>
                         <h3>The Discovery Map Retreat</h3>
@@ -1445,6 +1520,40 @@
                         <a href="../discovery-scholarships/#pay-it-forward" class="btn-outline">Give to Pay It Forward</a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Career & Major Discovery Sessions -->
+        <section class="section" id="career-discovery" aria-labelledby="career-discovery-title">
+            <div class="section__inner">
+                <div class="prose">
+                    <span class="section__label">Career &amp; Major Discovery Sessions</span>
+                    <h2 class="section__title" id="career-discovery-title">Discover Your Strengths. Explore Your Possibilities. Find Your Direction.</h2>
+                    <p class="career__lede">Not sure what you want to major in? Wondering what careers might be a good fit? Or simply unsure what comes next?</p>
+                    <p>Career &amp; Major Discovery Sessions are personalized, one-on-one coaching experiences designed to help high school students, college students, and adults explore their interests, identify their strengths, and discover educational and career opportunities they may not have considered.</p>
+                </div>
+                <div class="career__grid">
+                    <div class="career__explore">
+                        <h3>During your session, we'll explore:</h3>
+                        <ul>
+                            <li>Your interests, passions, and natural strengths</li>
+                            <li>Career fields that align with who you are</li>
+                            <li>Actual jobs and opportunities within those fields</li>
+                            <li>College majors and educational pathways</li>
+                            <li>Potential salaries and career outlooks</li>
+                            <li>Practical next steps to help you move forward</li>
+                        </ul>
+                    </div>
+                    <div class="career__invest">
+                        <h3>Investment</h3>
+                        <p class="career__price">$100 per 60-minute session</p>
+                        <p class="career__price-note">Introductory rate · regularly $250 an hour</p>
+                        <p>Sessions are personalized to your individual needs. No long-term commitment required.</p>
+                        <a href="../contact/" class="hero__cta">Schedule Your Discovery Session</a>
+                        <p class="career__aid">Is cost a barrier? <a href="../discovery-scholarships/">Ask about a Discovery Scholarship</a></p>
+                    </div>
+                </div>
+                <p class="career__closing">You don't have to have your future figured out. You just need a place to start discovering it.</p>
             </div>
         </section>
 
@@ -1556,6 +1665,7 @@
                         <div class="faq__answer">
                             <p>Not at all!</p>
                             <p>Although I have spent years coaching and training leaders, my passion is helping people discover more about themselves.</p>
+                            <p>I work with high school students, college students, and adults. Students choosing a major or exploring careers may find a <a href="#career-discovery">Career &amp; Major Discovery Session</a> is a great place to start.</p>
                             <p>Whether you're navigating change, questioning your direction, or simply feeling stuck, Discovery Coaching may be a good fit.</p>
                         </div>
                     </details>
